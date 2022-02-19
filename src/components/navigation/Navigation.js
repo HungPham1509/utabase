@@ -6,8 +6,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Drawer from './drawer/Drawer';
 import MenuBar from './menuBar/MenuBar';
 import {Route, Switch} from "react-router";
-import Login from "../../pages/login/Login";
 import Document from "../../pages/documents/Document";
+import News from "../../pages/documents/news/News";
 
 const mdTheme = createTheme();
 
@@ -37,7 +37,8 @@ function DashboardContent() {
                 >
                     <Toolbar/>
                     <Switch>
-                        <Route path="/documents" component={Document}/>
+                        <Route exact path="/documents" component={Document}/>
+                        <Route exact path='/documents/news' component={News} />
                     </Switch>
                 </Box>
             </Box>
