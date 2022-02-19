@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import {menuItems} from "../MenuItems";
+import MenuItems from "../MenuItems";
 import * as React from "react";
 
 const StyledDrawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})(
@@ -52,7 +52,7 @@ export default function Drawer(props) {
             </Toolbar>
             <Divider/>
             <List component="nav">
-                {menuItems}
+                <MenuItems />
             </List>
         </StyledDrawer>
     )

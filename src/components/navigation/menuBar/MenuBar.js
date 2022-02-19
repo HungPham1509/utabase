@@ -7,6 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import {useLocation} from "react-router-dom";
 import * as React from "react";
 
 const StyledMenuBar = styled(MuiAppBar, {
@@ -28,6 +29,8 @@ const StyledMenuBar = styled(MuiAppBar, {
 }));
 
 export default function MenuBar(props) {
+    let location = useLocation()
+    let header = location.pathname.split("/")[1].toUpperCase()
     return (
         <StyledMenuBar position="absolute" open={props.open}>
             <Toolbar
@@ -54,7 +57,7 @@ export default function MenuBar(props) {
                     noWrap
                     sx={{flexGrow: 1}}
                 >
-                    Dashboard
+                    {header}
                 </Typography>
                 <IconButton color="inherit">
                     <Badge badgeContent={4} color="secondary">

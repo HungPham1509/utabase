@@ -38,7 +38,7 @@ function DashboardContent() {
                     <Toolbar/>
                     <Switch>
                         <Route exact path="/documents" component={Document}/>
-                        <Route exact path='/documents/news' component={News} />
+                        <Route exact path='/documents/news/:newsId' component={News} />
                     </Switch>
                 </Box>
             </Box>
